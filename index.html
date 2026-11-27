@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a12">
+  <meta name="description" content="INFINITE CONTENT — Ideas Have No Limits. Discover articles, magazines, creativity and knowledge.">
+  <meta name="google-site-verification" content="wCDe9fOUlxxFuiyA-ryyDz1Cnn-WvEdHtfS8QJVQoQk">
+  <meta property="og:title" content="INFINITE CONTENT ∞">
+  <meta property="og:description" content="A universe of knowledge, creativity and ideas.">
+  <meta property="og:type" content="website">
+  <title>INFINITE CONTENT ∞ — Ideas Have No Limits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-label="Loading"><span>∞</span><small>INFINITE CONTENT</small></div>
+  <div class="reading-progress" id="readingProgress"></div>
+  <header class="site-header">
+    <div class="nav wrap">
+      <a class="logo" href="#home" aria-label="INFINITE CONTENT home">INFINITE <span>∞</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav">
+        <a href="#home">Home</a><a href="#featured">Featured</a><a href="#explore">Explore</a>
+        <a href="#categories">Categories</a><a href="#about">About</a><a href="#founder">Founder</a>
+        <a href="#studio">Creator Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="stars" aria-hidden="true"></div>
+      <div class="wrap hero-inner reveal">
+        <div class="infinity-mark" aria-hidden="true">∞</div>
+        <div class="eyebrow">A universe of ideas</div>
+        <h1>INFINITE <span>CONTENT</span></h1>
+        <h2>IDEAS HAVE NO LIMITS.</h2>
+        <p>A space where knowledge meets imagination. Discover fascinating stories, explore different perspectives and experience the power of words.</p>
+        <div class="actions centered"><a class="button primary" href="#explore">Explore Now <span>↗</span></a><a class="button ghost" href="#about">Discover Our Vision</a></div>
+        <div class="hero-note"><span></span> THINK · DISCOVER · CREATE</div>
+      </div>
+      <a class="scroll-cue" href="#featured" aria-label="Scroll to featured publications">↓</a>
+    </section>
+
+    <section class="stats-strip wrap reveal" aria-label="Publication statistics">
+      <div><strong id="statPublications">—</strong><span>Publications</span></div>
+      <div><strong id="statArticles">—</strong><span>Articles</span></div>
+      <div><strong id="statMagazines">—</strong><span>Magazines</span></div>
+      <div><strong>∞</strong><span>Possibilities</span></div>
+    </section>
+
+    <section id="featured" class="section">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><div class="eyebrow">Selected perspectives</div><h2 class="section-title">The Infinite Edit</h2><p class="muted">A handpicked window into ideas worth exploring.</p></div><a class="text-link" href="#explore">All publications ↗</a></div>
+        <div class="feature-grid" id="featuredPublications"><div class="loading-note">Discovering featured publications…</div></div>
+      </div>
+    </section>
+
+    <section id="explore" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><div class="eyebrow">Discover · Read · Imagine</div><h2 class="section-title">Explore the Infinite</h2><p class="muted">Every publication is a new perspective. Find something worth thinking about.</p></div></div>
+        <div class="explore-tools reveal">
+          <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search publications, ideas and topics…" aria-label="Search publications"><kbd>/</kbd></label>
+          <div class="filters" id="filters" aria-label="Filter by category">
+            <button class="chip active" data-filter="All">All</button><button class="chip" data-filter="Technology">Technology</button>
+            <button class="chip" data-filter="Science">Science</button><button class="chip" data-filter="Business">Business</button>
+            <button class="chip" data-filter="Education">Education</button><button class="chip" data-filter="Sports">Sports</button>
+            <button class="chip" data-filter="Creativity">Creativity</button><button class="chip" data-filter="Lifestyle">Lifestyle</button><button class="chip" data-filter="General">General</button>
+          </div>
+        </div>
+        <div class="publication-grid" id="publications" aria-live="polite"><div class="loading-note">Loading the library…</div></div>
+        <p class="source-note" id="sourceNote"></p>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><div class="eyebrow">Find your world</div><h2 class="section-title">Explore Every Possibility</h2><p class="muted">Different interests. Different perspectives. One infinite platform.</p></div></div>
+        <div class="category-grid">
+          <button class="category-card reveal" data-category="Technology"><span>⌘</span><small>01 · INNOVATION</small><b>Technology</b><p>AI, inventions, robotics and the technologies shaping tomorrow.</p><i>Explore ↗</i></button>
+          <button class="category-card reveal" data-category="Science"><span>✦</span><small>02 · DISCOVERY</small><b>Science & Space</b><p>The universe, physics, nature and extraordinary discoveries.</p><i>Explore ↗</i></button>
+          <button class="category-card reveal" data-category="Business"><span>↗</span><small>03 · AMBITION</small><b>Business & Finance</b><p>Entrepreneurship, leadership and economic thinking.</p><i>Explore ↗</i></button>
+          <button class="category-card reveal" data-category="Education"><span>✎</span><small>04 · KNOWLEDGE</small><b>Education</b><p>Useful knowledge and ideas that make learning exciting.</p><i>Explore ↗</i></button>
+          <button class="category-card reveal" data-category="Sports"><span>★</span><small>05 · PASSION</small><b>Sports</b><p>Sporting stories, analysis and the spirit of competition.</p><i>Explore ↗</i></button>
+          <button class="category-card reveal" data-category="Creativity"><span>◇</span><small>06 · EXPRESSION</small><b>Creativity & Culture</b><p>Writing, art, design, entertainment and original perspectives.</p><i>Explore ↗</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="wrap about-layout reveal">
+        <div><div class="eyebrow">More than a publishing website</div><h2 class="section-title">A world without creative boundaries.</h2></div>
+        <div class="about-copy"><p>INFINITE CONTENT is built around the belief that ideas are among the most powerful things in the world. Knowledge should be explored, creativity should be encouraged and meaningful perspectives should be shared.</p><p>From science and technology to sports, business and storytelling, this platform brings different subjects together in one reading experience.</p><strong>Think beyond boundaries. Discover beyond limits.</strong></div>
+      </div>
+    </section>
+
+    <section id="founder" class="section">
+      <div class="wrap founder-panel reveal">
+        <div class="founder-symbol">∞</div><div class="eyebrow">The mind behind the vision</div><h2 class="section-title">Meet the Founder</h2>
+        <div class="founder-name">Aashrith G.</div>
+        <p>A student, curious thinker and aspiring creator who believes that age should never limit ambition and that imagination can be the beginning of something extraordinary.</p>
+        <p>INFINITE CONTENT comes from a simple vision: to create a space where knowledge, creativity and ideas can exist beyond boundaries.</p>
+        <p>I believe the future belongs to people who keep questioning, keep learning and dare to think differently. This platform represents that belief.</p>
+        <strong>One vision. Endless possibilities. ∞</strong>
+      </div>
+    </section>
+
+    <section id="studio" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><div class="eyebrow">Private owner access</div><h2 class="section-title">Creator Studio</h2><p class="muted">A private workspace to create and manage your articles and digital magazines.</p></div></div>
+        <div class="studio-card" id="loginPanel">
+          <div class="studio-icon">✧</div><h3>Welcome back, Creator.</h3><p class="muted">Sign in with the authorized owner account. Public registration is disabled.</p>
+          <form id="loginForm" class="login-form">
+            <label for="email">Creator email</label><input id="email" type="email" autocomplete="username" required placeholder="Your authorized email">
+            <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required placeholder="Your password">
+            <button class="button primary" id="loginButton" type="submit">Sign in to Creator Studio ↗</button>
+          </form>
+          <p class="tiny-note" id="authMessage">Creator access is managed securely through Supabase Authentication.</p>
+        </div>
+
+        <div class="dashboard hidden" id="editorPanel">
+          <div class="dashboard-top"><div><div class="eyebrow">PRIVATE WORKSPACE</div><h3>Welcome, Aashrith.</h3><p class="muted">Your ideas, organised in one place.</p></div><button class="button ghost small" id="logoutButton">Sign out</button></div>
+          <div class="dashboard-stats">
+            <div><span>Total publications</span><strong id="dashTotal">0</strong></div><div><span>Published</span><strong id="dashPublished">0</strong></div><div><span>Drafts</span><strong id="dashDrafts">0</strong></div>
+          </div>
+          <div class="editor-layout">
+            <form id="publicationForm" class="editor-form">
+              <div class="editor-heading"><div><div class="eyebrow">PUBLICATION WORKSHOP</div><h3 id="editorHeading">Create a publication</h3></div><span class="status-pill" id="editorStatus">NEW</span></div>
+              <input type="hidden" id="postId">
+              <label for="title">Publication title</label><input id="title" maxlength="180" required placeholder="Give your idea a title">
+              <div class="form-row"><div><label for="type">Publication type</label><select id="type"><option>Article</option><option>Magazine</option></select></div><div><label for="category">Category</label><select id="category"><option>Technology</option><option>Science</option><option>Business</option><option>Education</option><option>Sports</option><option>Creativity</option><option>Lifestyle</option><option>General</option></select></div></div>
+              <label for="description">Short description</label><textarea id="description" class="short-text" maxlength="350" required placeholder="A concise introduction to your publication…"></textarea>
+              <label for="coverFile">Cover image</label><input id="coverFile" type="file" accept="image/png,image/jpeg,image/webp">
+              <div class="cover-preview hidden" id="coverPreviewWrap"><img id="coverPreview" alt="Selected cover preview"><button type="button" class="text-link" id="removeCover">Remove selected image</button></div>
+              <label for="content">Full content</label><textarea id="content" class="content-input" required placeholder="Write your article or magazine content here…"></textarea>
+              <div class="form-row editor-actions"><button class="button primary" type="submit" id="publishButton">Publish now ↗</button><button class="button ghost" type="button" id="draftButton">Save draft</button><button class="button ghost hidden" type="button" id="cancelEditButton">Cancel</button></div>
+              <p class="tiny-note">Changes are saved to the shared Supabase database, not just this browser.</p>
+            </form>
+            <aside class="manage-panel"><div class="editor-heading"><div><div class="eyebrow">YOUR LIBRARY</div><h3>Manage publications</h3></div></div><div id="myPosts" class="manage-list"><p class="muted">Sign in to load your publications.</p></div></aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#home">INFINITE <span>∞</span> CONTENT</a><p>Ideas Have No Limits.</p><p class="footer-credit">Created with a vision by Aashrith G.</p><small>© <span id="year"></span> INFINITE CONTENT. All rights reserved.</small></footer>
+
+  <div class="reader hidden" id="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <div class="reader-top"><button class="button ghost small" id="closeReader">← Back to publications</button><span>INFINITE CONTENT ∞</span></div>
+    <article class="reader-article" id="readerBody"></article>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
