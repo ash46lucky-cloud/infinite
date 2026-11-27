@@ -5,7 +5,7 @@
 
 window.INFINITE_SUPABASE_CONFIG = {
   url: "https://teegfswkisshvsjpadew.supabase.co",
-  anonKey: "YOUR_SB_PUBLISHABLE_KEY",
+  anonKey: "sb_publishable_HXivrhzcDxHlwUXlWqPpAQ_jpKjck0M",
   storageBucket: "publication-covers"
 };
 
