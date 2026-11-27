@@ -3,7 +3,7 @@
   The anon key is designed for browser use. NEVER put a service_role key here.
 */
 window.INFINITE_SUPABASE_CONFIG = {
-  url: "YOUR_SUPABASE_PROJECT_URL",
-  anonKey: "YOUR_SUPABASE_ANON_PUBLIC_KEY",
+  url: "sb_publishable_hxivrhzcdxhiwuxiwqppaq_jpkjckom",
+  anonKey: "teegfswkisshvsjpadew.supabase.co/rest/v1/",
   storageBucket: "publication-covers"
 };
